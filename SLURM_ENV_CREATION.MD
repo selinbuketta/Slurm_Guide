@@ -23,5 +23,38 @@ This is the industry-standard HPC workflow.
 
 ---
 
-## How to create Conda environment in SLURM?
+## How to create MiniConda environment in SLURM?
 
+Step 1: Move to Your Project Storage Directory
+
+Always install software in a **project or fast storage directory**, not in `$HOME`.
+
+```bash
+cd /fast_storage/<username>
+```
+Step 2: Download Miniconda Installer
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-py38_23.5.2-0-Linux-x86_64.sh
+```
+Step 3: Install Miniconda (Batch Mode)
+```bash
+bash Miniconda3-py38_23.5.2-0-Linux-x86_64.sh -b -p /fast_storage/<username>/miniconda38
+```
+Step 4: Activate Miniconda
+```bash
+source /fast_storage/<username>/miniconda38/bin/activate
+```
+Verify the installation:
+```bash
+python --version
+``` 
+Step 5: Create a Conda Environment and Activate the Environment
+```bash
+conda create -n tf26 python=3.8 -y
+conda activate tf26
+```
+
+Deactivate the Environment:
+```bash
+conda deactivate tf26
+```
