@@ -34,6 +34,18 @@ SLURM solves these problems by requiring users to **declare resource needs upfro
 
 ---
 
+## Connecting to an HPC Cluster via SSH
+
+This section explains how to **log in to an HPC cluster using SSH** in a clean, non-personalized way suitable for shared documentation and onboarding guides.
+
+
+## Basic SSH Login Command
+
+To connect to the cluster login node, use:
+
+```bash
+ssh <username>@<login-node-address> -p <port>
+```
 
 
 

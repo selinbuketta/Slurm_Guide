@@ -30,7 +30,7 @@ Step 1: Move to Your Project Storage Directory
 Always install software in a **project or fast storage directory**, not in `$HOME`.
 
 ```bash
-cd /fast_storage/<username>
+cd /fast_storage/<username>/Projects/Slurm
 ```
 Step 2: Download Miniconda Installer
 ```bash

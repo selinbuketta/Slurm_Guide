@@ -22,7 +22,6 @@ You should always begin on a **login node**, which is used for:
 
 Never run GPU workloads directly on the login node.
 
----
 
 Step 2: Interactive Debug Job
 

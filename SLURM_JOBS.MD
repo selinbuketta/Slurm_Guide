@@ -4,6 +4,20 @@ A SLURM job script is a **Bash script with scheduler directives** that describe:
 - How long the job may run
 - What command(s) should be executed
 
+---
+
+Step 1: Move to Your Project Storage Directory
+
+Always install software in a **project or fast storage directory**, not in `$HOME`.
+
+```bash
+cd /fast_storage/<username>/Projects/Slurm
+```
+Step 2: Create and edit your script
+```bash
+nano job.sh
+```
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=my_job
@@ -27,23 +41,33 @@ python train.py
 ```bash
 sbatch job.sh
 ```
+**Output:**
+```
 Submitted batch job 123456
+```
 
 ## Monitoring Slurm Job
-Check Job Status
+Check Job Status:
 ```bash
 squeue -u $USER
 ```
-Inspect Job Details
+Inspect Job Details:
 ```bash
 scontrol show job <job_id>
 ```
 Monitor Logs in Real Time
+
+Monitor first rows in log file:
+```bash
+head -300 train_R_215.err
+```
+
+Monitor last rows in log file:
 ```bash
 tail -f logs/123456.out
 tail -300 train_R_215.err
 ```
-Resource Usage After Completion
+Resource Usage After Completion:
 ```bash
 sacct -j <job_id> --format=JobID,State,Elapsed,MaxRSS,AllocGRES
 ```
