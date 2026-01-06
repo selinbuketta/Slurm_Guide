@@ -1,2 +1,30 @@
 # Slurm_Guide
-This module is a complete and professional Slurm guide that explains step-by-step explanations and best practices.
+
+This repository provides a **complete, practical, and professional guide to SLURM**, aimed at users running **data-intensive and GPU-accelerated workloads** on shared HPC systems.  
+The guide focuses on **concepts, best practices, and real-world workflows**, especially for machine learning and research environments.
+
+---
+
+## What is SLURM?
+
+**SLURM (Simple Linux Utility for Resource Management)** is an open-source workload manager used on **high-performance computing (HPC) clusters**. It is responsible for:
+
+- Scheduling jobs submitted by multiple users
+- Allocating compute resources (CPU, GPU, memory, time)
+- Enforcing fair usage and isolation
+- Tracking resource usage and job history
+
+In short, **SLURM decides who runs what, where, and when** on a cluster.
+
+### Why SLURM Is Required
+On shared systems, running jobs directly via SSH would cause:
+- GPU and CPU oversubscription
+- Memory conflicts
+- Uncontrolled runtimes
+- No accountability or fairness
+
+SLURM solves these problems by requiring users to **declare resource needs upfront**, allowing the scheduler to manage execution safely and efficiently.
+
+---
+
+
